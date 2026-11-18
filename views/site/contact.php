@@ -6,9 +6,12 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-$this->title = 'Contact Us - Let\'s Talk Solar | Solar Energy';
-$this->params['meta_description'] = 'Contact Solar Energy at Dumuduma, Near Archana Enclave. Call 8658868780 or email pravatkumar95@gmail.com for solar panels, inverters, batteries, water pumps, heaters, and street lights.';
-$this->params['meta_keywords'] = 'Contact Solar Energy, Dumuduma Near Archana Enclave, pravatkumar95@gmail.com, 8658868780, Solar Consultation';
+$this->title = 'Contact OneSolar | Free Solar Survey & Quotation Bhubaneswar';
+$this->params['meta_description'] = 'Contact OneSolar at Plot No. 124, Near Archana Enclave, Dumuduma, Bhubaneswar. Call +91 86588 68780 for a free rooftop solar survey, PM Surya Ghar subsidy help, and solar quotation.';
+$this->params['meta_keywords'] = 'solar installation quotation Bhubaneswar, contact OneSolar, solar office Dumuduma, solar consultant Bhubaneswar, 8658868780, book solar site survey, solar price quote Odisha, PM Surya Ghar vendor Bhubaneswar, solar panel dealer contact number';
+$this->params['og_title'] = 'Contact OneSolar | Free Solar Survey & Quotation Bhubaneswar';
+$this->params['og_description'] = 'Contact OneSolar in Bhubaneswar for a free rooftop solar site inspection, quotation & PM Surya Ghar subsidy support.';
+$this->params['og_image'] = Url::to('@web/images/hero_solar_house.webp', true);
 
 $selectedTopic = Yii::$app->request->get('topic', '');
 $submitted = Yii::$app->request->isPost || Yii::$app->session->hasFlash('success');
@@ -254,8 +257,8 @@ $facebookUrl = $socials['facebook'] ?? 'https://www.facebook.com/profile.php?id=
                                     </div>
                                     <div>
                                         <div class="contact-info-label">Visit Us</div>
-                                        <div class="contact-info-primary">Dumuduma</div>
-                                        <div class="contact-info-secondary">Near Archana Enclave</div>
+                                        <div class="contact-info-primary">Plot No. 124, Near Archana Enclave</div>
+                                        <div class="contact-info-secondary">Dumuduma, Bhubaneswar, Odisha - 751019</div>
                                     </div>
                                 </div>
 
@@ -266,8 +269,8 @@ $facebookUrl = $socials['facebook'] ?? 'https://www.facebook.com/profile.php?id=
                                     </div>
                                     <div>
                                         <div class="contact-info-label">Working Hours</div>
-                                        <div class="contact-info-primary">Monday – Saturday</div>
-                                        <div class="contact-info-secondary">9:00 AM – 6:00 PM</div>
+                                        <div class="contact-info-primary">Monday – Saturday: 9:00 AM – 7:00 PM</div>
+                                        <div class="contact-info-secondary">Sunday: 10:00 AM – 4:00 PM (By Appointment)</div>
                                     </div>
                                 </div>
 

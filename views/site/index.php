@@ -5,9 +5,140 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-$this->title = 'Solar Energy - PM Surya Ghar: Muft Bijli Yojana';
-$this->params['meta_description'] = 'PM Surya Ghar Muft Bijli Yojana - Clean rooftop solar energy for every Indian home. Avail government subsidies, reduce electricity bills and achieve energy independence.';
-$this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy India, solar subsidy, solar panels, solar inverter, clean energy';
+$this->title = 'OneSolar | Solar Panel Installation & Rooftop Solar in Bhubaneswar, Odisha';
+$this->params['meta_description'] = 'OneSolar is Bhubaneswar\'s trusted rooftop solar installation company. Avail up to ₹78,000 PM Surya Ghar Central DBT subsidy, 300 free monthly units, and TPCODL net metering.';
+$this->params['meta_keywords'] = 'OneSolar Bhubaneswar, solar panel installation cost in Bhubaneswar, rooftop solar price in Bhubaneswar, solar installation company near me, best rooftop solar installer Odisha, PM Surya Ghar subsidy eligibility Odisha, 3kW rooftop solar installation cost Odisha, 5kW rooftop solar installation cost Bhubaneswar, residential solar EPC company Odisha, solar net metering TPCODL';
+$this->params['og_title'] = 'OneSolar | Solar Panel Installation & Rooftop Solar in Bhubaneswar, Odisha';
+$this->params['og_description'] = 'Switch to rooftop solar with OneSolar. Get up to ₹78,000 PM Surya Ghar Central DBT subsidy and reduce your electricity bills by up to 90% in Odisha.';
+$this->params['og_image'] = preg_replace('/^http:\/\//i', 'https://', Url::to('@web/images/hero_solar_house.webp', true));
+
+$homeUrl = preg_replace('/^http:\/\//i', 'https://', Url::to(['/site/index'], true));
+$logoUrl = preg_replace('/^http:\/\//i', 'https://', Url::to('@web/images/logo.png', true));
+$heroImg = preg_replace('/^http:\/\//i', 'https://', Url::to('@web/images/hero_solar_house.webp', true));
+
+$this->params['schema_jsonld'] = [
+    '@context' => 'https://schema.org',
+    '@graph' => [
+        [
+            '@type' => 'SolarEnergyCompany',
+            '@id' => $homeUrl . '#organization',
+            'name' => 'OneSolar',
+            'legalName' => 'OneSolar Energy Solutions Odisha',
+            'brand' => [
+                '@type' => 'Brand',
+                'name' => 'OneSolar',
+            ],
+            'url' => $homeUrl,
+            'logo' => [
+                '@type' => 'ImageObject',
+                'url' => $logoUrl,
+            ],
+            'image' => $heroImg,
+            'description' => 'Premier rooftop solar installer in Bhubaneswar, Odisha. Authorized PM Surya Ghar Muft Bijli Yojana partner providing subsidies, on-grid, off-grid and commercial solar installations.',
+            'telephone' => '+91-86588-68780',
+            'email' => 'pravatkumar95@gmail.com',
+            'priceRange' => '₹₹',
+            'address' => [
+                '@type' => 'PostalAddress',
+                'streetAddress' => 'Plot No. 124, Near Archana Enclave, Dumuduma',
+                'addressLocality' => 'Bhubaneswar',
+                'addressRegion' => 'Odisha',
+                'postalCode' => '751019',
+                'addressCountry' => 'IN',
+            ],
+            'geo' => [
+                '@type' => 'GeoCoordinates',
+                'latitude' => 20.2505,
+                'longitude' => 85.7925,
+            ],
+            'openingHoursSpecification' => [
+                [
+                    '@type' => 'OpeningHoursSpecification',
+                    'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                    'opens' => '09:00',
+                    'closes' => '19:00',
+                ],
+            ],
+            'areaServed' => [
+                ['@type' => 'City', 'name' => 'Bhubaneswar'],
+                ['@type' => 'City', 'name' => 'Cuttack'],
+                ['@type' => 'City', 'name' => 'Puri'],
+                ['@type' => 'AdministrativeArea', 'name' => 'Odisha'],
+            ],
+            'sameAs' => [
+                'https://wa.me/918658868780',
+                'https://instagram.com/solarenergy.odisha',
+                'https://youtube.com/@solarenergy_odisha',
+                'https://www.facebook.com/profile.php?id=61595069651891',
+            ],
+        ],
+        [
+            '@type' => 'WebSite',
+            '@id' => $homeUrl . '#website',
+            'url' => $homeUrl,
+            'name' => 'Solar Energy',
+            'description' => 'PM Surya Ghar Muft Bijli Yojana & Rooftop Solar in Odisha',
+            'publisher' => [
+                '@id' => $homeUrl . '#organization',
+            ],
+            'inLanguage' => 'en-IN',
+        ],
+        [
+            '@type' => 'FAQPage',
+            '@id' => $homeUrl . '#faq',
+            'mainEntity' => [
+                [
+                    '@type' => 'Question',
+                    'name' => 'What is PM Surya Ghar Yojana?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'PM Surya Ghar: Muft Bijli Yojana is a flagship Government of India scheme that provides a financial subsidy to residential households to install rooftop solar panels, aiming to provide up to 300 units of free electricity every month to 1 crore households nationwide.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'Who is eligible for PM Surya Ghar Yojana?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'Any Indian citizen who owns a residential house with suitable roof rights and has a valid domestic electricity connection from their local DISCOM is eligible to apply for the scheme.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'How much subsidy do I get under PM Surya Ghar Yojana?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'For 1 kW system you receive ₹30,000, for 2 kW you receive ₹60,000, and for 3 kW or higher you receive the maximum Central Government subsidy of ₹78,000 transferred directly to your bank account via DBT.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'How do I apply for the rooftop solar subsidy in Odisha?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'You can register directly on the national portal pmsuryaghar.gov.in or contact our team at Solar Energy Dumuduma (+91 86588 68780). We handle the entire documentation, DISCOM net-metering approvals, and subsidy filing for you.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'How long does a rooftop solar installation take in Bhubaneswar?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'Once DISCOM feasibility approval is granted, physical rooftop installation typically takes only 2 to 4 days, followed by bi-directional net meter installation by the electricity department.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'Does solar work during rainy or cloudy days?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'Yes, modern high-efficiency monocrystalline solar panels continue to generate electricity during cloudy or rainy days by capturing diffused daylight, ensuring consistent power output across all seasons.',
+                    ],
+                ],
+            ],
+        ],
+    ],
+];
 ?>
 
 <div class="solar-home-page">
@@ -25,12 +156,12 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                     </div>
                     
                     <h1 class="hero-headline mb-3">
-                        <span class="headline-part-navy d-block">Bright Homes</span>
-                        <span class="headline-part-orange d-block">Brighter India</span>
+                        <span class="headline-part-navy d-block">Rooftop Solar Solutions</span>
+                        <span class="headline-part-orange d-block">in Bhubaneswar, Odisha</span>
                     </h1>
 
                     <p class="hero-subtext mb-4">
-                        Rooftop solar under PM Surya Ghar Yojana to make every home energy independent.
+                        Switch to clean, reliable solar with <strong>OneSolar</strong>. Avail up to ₹78,000 central subsidy under PM Surya Ghar Yojana and reduce your monthly electricity bills by up to 80–90%.
                     </p>
 
                     <div class="hero-cta-group d-flex flex-wrap align-items-center gap-3 mb-4 mb-lg-5">
@@ -176,7 +307,7 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                 <!-- Product 1: Solar Panels -->
                 <div class="product-card flex-shrink-0 active" role="button" tabindex="0" data-product-index="0">
                     <div class="product-img-box position-relative">
-                        <img src="<?= Url::to('@web/images/solar_panels.webp') ?>" alt="Solar Panels" class="product-thumb">
+                        <img src="<?= Url::to('@web/images/solar_panels.webp') ?>" alt="Tier-1 Monocrystalline Solar Panels for Rooftops in Bhubaneswar" width="300" height="224" loading="lazy" decoding="async" class="product-thumb">
                     </div>
                     <div class="product-body p-3 d-flex justify-content-between align-items-end">
                         <div>
@@ -192,7 +323,7 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                 <!-- Product 2: Solar Inverters -->
                 <div class="product-card flex-shrink-0" role="button" tabindex="0" data-product-index="1">
                     <div class="product-img-box position-relative">
-                        <img src="<?= Url::to('@web/images/solar_inverter.webp') ?>" alt="Solar Inverters" class="product-thumb">
+                        <img src="<?= Url::to('@web/images/solar_inverter.webp') ?>" alt="Smart On-Grid and Hybrid Solar Inverters in Odisha" width="300" height="224" loading="lazy" decoding="async" class="product-thumb">
                     </div>
                     <div class="product-body p-3 d-flex justify-content-between align-items-end">
                         <div>
@@ -208,7 +339,7 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                 <!-- Product 3: Mounting Structures -->
                 <div class="product-card flex-shrink-0" role="button" tabindex="0" data-product-index="2">
                     <div class="product-img-box position-relative">
-                        <img src="<?= Url::to('@web/images/solar_mounting.webp') ?>" alt="Mounting Structures" class="product-thumb">
+                        <img src="<?= Url::to('@web/images/solar_mounting.webp') ?>" alt="Heavy-Duty GI and Aluminium Solar Mounting Structures" width="300" height="224" loading="lazy" decoding="async" class="product-thumb">
                     </div>
                     <div class="product-body p-3 d-flex justify-content-between align-items-end">
                         <div>
@@ -224,7 +355,7 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                 <!-- Product 4: Solar Batteries -->
                 <div class="product-card flex-shrink-0" role="button" tabindex="0" data-product-index="3">
                     <div class="product-img-box position-relative">
-                        <img src="<?= Url::to('@web/images/solar_battery.webp') ?>" alt="Solar Batteries" class="product-thumb">
+                        <img src="<?= Url::to('@web/images/solar_battery.webp') ?>" alt="Long-Life Lithium and Tubular Solar Batteries in Odisha" width="300" height="224" loading="lazy" decoding="async" class="product-thumb">
                     </div>
                     <div class="product-body p-3 d-flex justify-content-between align-items-end">
                         <div>
@@ -240,7 +371,7 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                 <!-- Product 5: Monitoring Systems -->
                 <div class="product-card flex-shrink-0" role="button" tabindex="0" data-product-index="4">
                     <div class="product-img-box position-relative">
-                        <img src="<?= Url::to('@web/images/solar_monitor.webp') ?>" alt="Monitoring Systems" class="product-thumb">
+                        <img src="<?= Url::to('@web/images/solar_monitor.webp') ?>" alt="Smart Real-Time IoT Solar Generation Monitoring App" width="300" height="224" loading="lazy" decoding="async" class="product-thumb">
                     </div>
                     <div class="product-body p-3 d-flex justify-content-between align-items-end">
                         <div>
@@ -256,7 +387,7 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                 <!-- Product 6: Solar Water Pump -->
                 <div class="product-card flex-shrink-0" role="button" tabindex="0" data-product-index="5">
                     <div class="product-img-box position-relative">
-                        <img src="<?= Url::to('@web/images/pump_submersible_motor.webp') ?>" alt="Solar Water Pump" class="product-thumb">
+                        <img src="<?= Url::to('@web/images/pump_submersible_motor.webp') ?>" alt="Agricultural Solar Water Pump for Zero-Fuel Irrigation" width="300" height="224" loading="lazy" decoding="async" class="product-thumb">
                     </div>
                     <div class="product-body p-3 d-flex justify-content-between align-items-end">
                         <div>
@@ -272,7 +403,7 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                 <!-- Product 7: Solar Water Heater -->
                 <div class="product-card flex-shrink-0" role="button" tabindex="0" data-product-index="6">
                     <div class="product-img-box position-relative">
-                        <img src="<?= Url::to('@web/images/heater_etc_tubes.webp') ?>" alt="Solar Water Heater" class="product-thumb">
+                        <img src="<?= Url::to('@web/images/heater_etc_tubes.webp') ?>" alt="Evacuated Tube ETC Commercial and Domestic Solar Water Heater" width="300" height="224" loading="lazy" decoding="async" class="product-thumb">
                     </div>
                     <div class="product-body p-3 d-flex justify-content-between align-items-end">
                         <div>
@@ -288,7 +419,7 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                 <!-- Product 8: Solar Street Lights -->
                 <div class="product-card flex-shrink-0" role="button" tabindex="0" data-product-index="7">
                     <div class="product-img-box position-relative">
-                        <img src="<?= Url::to('@web/images/streetlight_all_in_one.webp') ?>" alt="Solar Street Lights" class="product-thumb">
+                        <img src="<?= Url::to('@web/images/streetlight_all_in_one.webp') ?>" alt="All-in-One Dusk-to-Dawn Outdoor Solar LED Street Light" width="300" height="224" loading="lazy" decoding="async" class="product-thumb">
                     </div>
                     <div class="product-body p-3 d-flex justify-content-between align-items-end">
                         <div>
@@ -307,7 +438,7 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                 <div class="row g-4 align-items-center">
                     <div class="col-lg-4 col-md-5">
                         <div class="product-showcase-img-wrap position-relative rounded-4 overflow-hidden shadow-sm">
-                            <img src="<?= Url::to('@web/images/solar_panels.webp') ?>" alt="Solar Panels" id="showcaseImg" class="w-100" style="height: 220px; object-fit: cover;">
+                            <img src="<?= Url::to('@web/images/solar_panels.webp') ?>" alt="Solar Panels and Inverters Showcase in Bhubaneswar" id="showcaseImg" class="w-100" width="400" height="220" loading="lazy" decoding="async" style="height: 220px; object-fit: cover;">
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-7">
@@ -439,7 +570,11 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                     <div class="col-lg-3 col-md-4 text-center text-md-start surya-modi-col">
                         <div class="surya-modi-cutout-wrap">
                             <img src="<?= Url::to('@web/images/modi_photo.png') ?>"
-                                 alt="Prime Minister Narendra Modi"
+                                 alt="Prime Minister Narendra Modi - PM Surya Ghar Muft Bijli Yojana"
+                                 width="360"
+                                 height="442"
+                                 loading="lazy"
+                                 decoding="async"
                                  class="surya-modi-cutout-img img-fluid">
                             <div class="surya-modi-caption-pill">
                                 <i class="bi bi-patch-check-fill text-warning me-1"></i> PM Surya Ghar: Muft Bijli Yojana
@@ -472,21 +607,21 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                             <div class="surya-star-points-bar mb-3">
                                 <div class="surya-star-chip">
                                     <i class="bi bi-star-fill text-warning"></i>
-                                    <span><strong>300 Units/Mo</strong> Free Power</span>
+                                    <span><strong>Up to 300+ Units/Mo</strong> Solar Generation*</span>
                                 </div>
                                 <div class="surya-star-chip">
                                     <i class="bi bi-star-fill text-warning"></i>
-                                    <span><strong>30-Day DBT</strong> Bank Transfer</span>
+                                    <span><strong>Direct DBT</strong> Bank Transfer*</span>
                                 </div>
                                 <div class="surya-star-chip">
                                     <i class="bi bi-star-fill text-warning"></i>
-                                    <span><strong>~7% Loan</strong> Zero Collateral</span>
+                                    <span><strong>Concessional Loans</strong> Available*</span>
                                 </div>
                             </div>
 
                             <!-- 4 Benefit Cards Grid (Arranged in 4 Structured Cards) -->
                             <div class="surya-v2-benefits-grid mb-4">
-                                <!-- Card 1: Up to ₹1,08,000 Subsidy -->
+                                <!-- Card 1: Up to ₹78,000 Subsidy -->
                                 <div class="surya-v2-benefit-card">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
                                         <div class="surya-v2-icon-box icon-box-orange">
@@ -494,8 +629,8 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                                         </div>
                                         <span class="surya-card-star-tag"><i class="bi bi-star-fill me-1"></i>DBT</span>
                                     </div>
-                                    <div class="surya-card-title">Up to ₹1,08,000</div>
-                                    <div class="surya-card-sub">Govt. Subsidy</div>
+                                    <div class="surya-card-title">Up to ₹78,000</div>
+                                    <div class="surya-card-sub">Central Subsidy (CFA)</div>
                                 </div>
 
                                 <!-- Card 2: Lower Electricity Bills -->
@@ -504,10 +639,10 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                                         <div class="surya-v2-icon-box icon-box-yellow-green">
                                             <i class="bi bi-lightning-charge-fill"></i>
                                         </div>
-                                        <span class="surya-card-star-tag"><i class="bi bi-star-fill me-1"></i>Save 90%</span>
+                                        <span class="surya-card-star-tag"><i class="bi bi-star-fill me-1"></i>Up to 90%*</span>
                                     </div>
                                     <div class="surya-card-title">Lower Bills</div>
-                                    <div class="surya-card-sub">Free Monthly Units</div>
+                                    <div class="surya-card-sub">Substantial Savings</div>
                                 </div>
 
                                 <!-- Card 3: Clean & Green Energy -->
@@ -632,7 +767,11 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                 <div class="col-lg-6">
                     <div class="why-solar-image-box">
                         <img src="<?= Url::to('@web/images/why_solar_house.webp') ?>" 
-                             alt="Solar Rooftop House Benefits" 
+                             alt="Rooftop Solar Installation on Residential Home in Odisha" 
+                             width="1200"
+                             height="896"
+                             loading="lazy"
+                             decoding="async"
                              class="img-fluid rounded-4 shadow-lg w-100">
                     </div>
                 </div>
@@ -648,158 +787,179 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
             <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
                 <div>
                     <div class="section-tag-badge mb-1">
-                        <span class="tag-dash"></span> REVIEWS
+                        <span class="tag-dash"></span> PROJECT SPOTLIGHTS
                     </div>
-                    <h2 class="section-heading mb-0">What Homeowners Say</h2>
+                    <h2 class="section-heading mb-1">Verified Solar Installations in Odisha</h2>
+                    <p class="text-muted small mb-0">Real turnkey rooftop systems engineered, commissioned, and grid-synchronized by OneSolar.</p>
                 </div>
                 <div class="section-nav-arrows d-flex gap-2 mt-3 mt-md-0">
-                    <button class="nav-arrow-circle" id="revPrev" aria-label="Previous Reviews">
+                    <button class="nav-arrow-circle" id="revPrev" aria-label="Previous Projects">
                         <i class="bi bi-arrow-left"></i>
                     </button>
-                    <button class="nav-arrow-circle" id="revNext" aria-label="Next Reviews">
+                    <button class="nav-arrow-circle" id="revNext" aria-label="Next Projects">
                         <i class="bi bi-arrow-right"></i>
                     </button>
                 </div>
             </div>
 
-            <!-- 5 Testimonial Cards Horizontal Scroller -->
+            <!-- 5 Project Cards Horizontal Scroller (Verified Odisha Installations) -->
             <div class="d-flex gap-4 products-scroll-container pb-2" id="testimonialScroller">
-                <!-- Testimonial 1: Anjali Verma -->
+                <!-- Project 1: 3 kW Rooftop Solar in Dumuduma -->
                 <div class="flex-shrink-0" style="width: 360px; max-width: 85vw;">
                     <div class="testimonial-card p-4 h-100 d-flex flex-column justify-content-between">
                         <div>
-                            <div class="quote-symbol text-navy mb-3">
-                                <i class="bi bi-quote"></i>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="badge bg-success text-white px-2 py-1 small fw-bold">
+                                    <i class="bi bi-house-check-fill me-1"></i> 3 kW Residential
+                                </span>
+                                <span class="badge bg-light text-muted border">TPCODL Net-Metered</span>
                             </div>
-                            <p class="testimonial-quote-text mb-4">
-                                “My electricity bill has reduced by more than 60%. The registration and installation process was smooth.”
+                            <h4 class="fw-bold text-navy fs-6 mb-2">Dumuduma, Bhubaneswar</h4>
+                            <p class="text-muted small mb-3">
+                                6x 550W Tier-1 Mono PERC modules installed on RCC flat terrace with customized elevated HDG structure to preserve terrace utility.
                             </p>
-                        </div>
-                        <div class="d-flex align-items-center gap-3">
-                            <img src="<?= Url::to('@web/images/user_anjali.webp') ?>" alt="Anjali Verma" class="user-avatar-round">
-                            <div>
-                                <h4 class="user-author-name mb-0">Anjali Verma</h4>
-                                <div class="user-city text-muted small mb-1">Jaipur</div>
-                                <div class="user-rating-stars text-warning small">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
+                            <div class="p-2 rounded bg-light border mb-3 small">
+                                <div class="d-flex justify-content-between text-muted mb-1">
+                                    <span>Average Monthly Bill:</span>
+                                    <span class="fw-bold text-danger"><del>₹3,800</del> &rarr; <span class="text-success">₹420</span></span>
+                                </div>
+                                <div class="d-flex justify-content-between text-muted">
+                                    <span>Central Subsidy:</span>
+                                    <span class="fw-bold text-success">₹78,000 DBT Credited</span>
                                 </div>
                             </div>
+                        </div>
+                        <div class="border-top pt-3 d-flex align-items-center justify-content-between small text-muted">
+                            <span><i class="bi bi-geo-alt-fill text-orange me-1"></i>Dumuduma Ward</span>
+                            <span class="text-success fw-semibold"><i class="bi bi-patch-check-fill me-1"></i>Commissioned</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 2: Rohit Sharma -->
+                <!-- Project 2: 5 kW On-Grid System in Patia -->
                 <div class="flex-shrink-0" style="width: 360px; max-width: 85vw;">
                     <div class="testimonial-card p-4 h-100 d-flex flex-column justify-content-between">
                         <div>
-                            <div class="quote-symbol text-navy mb-3">
-                                <i class="bi bi-quote"></i>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="badge bg-primary text-white px-2 py-1 small fw-bold">
+                                    <i class="bi bi-lightning-charge-fill me-1"></i> 5 kW On-Grid Duplex
+                                </span>
+                                <span class="badge bg-light text-muted border">Three-Phase Sync</span>
                             </div>
-                            <p class="testimonial-quote-text mb-4">
-                                “Solar Energy made solar installation easy and affordable for our home. The team supported us at every step.”
+                            <h4 class="fw-bold text-navy fs-6 mb-2">Patia, Bhubaneswar</h4>
+                            <p class="text-muted small mb-3">
+                                High-efficiency 540W bifacial modules with three-phase grid-tied inverter. Concealed heavy-duty wiring and bi-directional meter synchronization.
                             </p>
-                        </div>
-                        <div class="d-flex align-items-center gap-3">
-                            <img src="<?= Url::to('@web/images/user_rohit.webp') ?>" alt="Rohit Sharma" class="user-avatar-round">
-                            <div>
-                                <h4 class="user-author-name mb-0">Rohit Sharma</h4>
-                                <div class="user-city text-muted small mb-1">New Delhi</div>
-                                <div class="user-rating-stars text-warning small">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
+                            <div class="p-2 rounded bg-light border mb-3 small">
+                                <div class="d-flex justify-content-between text-muted mb-1">
+                                    <span>Estimated Generation:</span>
+                                    <span class="fw-bold text-navy">~650 Units / Month</span>
+                                </div>
+                                <div class="d-flex justify-content-between text-muted">
+                                    <span>Annual Power Savings:</span>
+                                    <span class="fw-bold text-success">~₹48,000 / Year</span>
                                 </div>
                             </div>
+                        </div>
+                        <div class="border-top pt-3 d-flex align-items-center justify-content-between small text-muted">
+                            <span><i class="bi bi-geo-alt-fill text-orange me-1"></i>Patia Info Valley</span>
+                            <span class="text-success fw-semibold"><i class="bi bi-patch-check-fill me-1"></i>Commissioned</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 3: Suresh Kumar -->
+                <!-- Project 3: 5 kW Hybrid BESS in CDA Cuttack -->
                 <div class="flex-shrink-0" style="width: 360px; max-width: 85vw;">
                     <div class="testimonial-card p-4 h-100 d-flex flex-column justify-content-between">
                         <div>
-                            <div class="quote-symbol text-navy mb-3">
-                                <i class="bi bi-quote"></i>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="badge bg-warning text-dark px-2 py-1 small fw-bold">
+                                    <i class="bi bi-battery-charging me-1"></i> 5 kW Hybrid BESS
+                                </span>
+                                <span class="badge bg-light text-muted border">24/7 Power Security</span>
                             </div>
-                            <p class="testimonial-quote-text mb-4">
-                                “A great initiative for every household. Clean energy, lower bills and a better future for our children.”
+                            <h4 class="fw-bold text-navy fs-6 mb-2">CDA Sector 9, Cuttack</h4>
+                            <p class="text-muted small mb-3">
+                                Hybrid inverter paired with 5.12 kWh LiFePO4 battery storage. Engineered to power air conditioning and refrigerators seamlessly during summer grid outages.
                             </p>
-                        </div>
-                        <div class="d-flex align-items-center gap-3">
-                            <img src="<?= Url::to('@web/images/user_suresh.webp') ?>" alt="Suresh Kumar" class="user-avatar-round">
-                            <div>
-                                <h4 class="user-author-name mb-0">Suresh Kumar</h4>
-                                <div class="user-city text-muted small mb-1">Bangalore</div>
-                                <div class="user-rating-stars text-warning small">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
+                            <div class="p-2 rounded bg-light border mb-3 small">
+                                <div class="d-flex justify-content-between text-muted mb-1">
+                                    <span>Grid Outage Switching:</span>
+                                    <span class="fw-bold text-success">&lt;10ms Seamless UPS</span>
+                                </div>
+                                <div class="d-flex justify-content-between text-muted">
+                                    <span>Battery Life Expectancy:</span>
+                                    <span class="fw-bold text-navy">6,000+ Cycles (10+ Yrs)</span>
                                 </div>
                             </div>
+                        </div>
+                        <div class="border-top pt-3 d-flex align-items-center justify-content-between small text-muted">
+                            <span><i class="bi bi-geo-alt-fill text-orange me-1"></i>CDA Cuttack</span>
+                            <span class="text-success fw-semibold"><i class="bi bi-patch-check-fill me-1"></i>Commissioned</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 4: Priya Nair -->
+                <!-- Project 4: 3 kW PM Surya Ghar in Khandagiri -->
                 <div class="flex-shrink-0" style="width: 360px; max-width: 85vw;">
                     <div class="testimonial-card p-4 h-100 d-flex flex-column justify-content-between">
                         <div>
-                            <div class="quote-symbol text-navy mb-3">
-                                <i class="bi bi-quote"></i>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 small fw-bold">
+                                    <i class="bi bi-patch-check-fill me-1"></i> 3 kW PM Surya Ghar
+                                </span>
+                                <span class="badge bg-light text-muted border">Full Subsidy Assistance</span>
                             </div>
-                            <p class="testimonial-quote-text mb-4">
-                                “We received our ₹78,000 PM Surya Ghar subsidy directly into our bank account within 3 weeks of installation!”
+                            <h4 class="fw-bold text-navy fs-6 mb-2">Khandagiri, Bhubaneswar</h4>
+                            <p class="text-muted small mb-3">
+                                Turnkey PM Surya Ghar execution: National portal vendor booking, TPCODL feasibility letter, installation, and inspection liaison handled end-to-end.
                             </p>
-                        </div>
-                        <div class="d-flex align-items-center gap-3">
-                            <img src="<?= Url::to('@web/images/user_anjali.webp') ?>" alt="Priya Nair" class="user-avatar-round">
-                            <div>
-                                <h4 class="user-author-name mb-0">Priya Nair</h4>
-                                <div class="user-city text-muted small mb-1">Pune</div>
-                                <div class="user-rating-stars text-warning small">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
+                            <div class="p-2 rounded bg-light border mb-3 small">
+                                <div class="d-flex justify-content-between text-muted mb-1">
+                                    <span>Turnkey Installation:</span>
+                                    <span class="fw-bold text-navy">Completed in 3 Days</span>
+                                </div>
+                                <div class="d-flex justify-content-between text-muted">
+                                    <span>Direct Benefit Transfer:</span>
+                                    <span class="fw-bold text-success">₹78,000 Credited to Bank</span>
                                 </div>
                             </div>
+                        </div>
+                        <div class="border-top pt-3 d-flex align-items-center justify-content-between small text-muted">
+                            <span><i class="bi bi-geo-alt-fill text-orange me-1"></i>Khandagiri Marg</span>
+                            <span class="text-success fw-semibold"><i class="bi bi-patch-check-fill me-1"></i>Commissioned</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 5: Vikram Patel -->
+                <!-- Project 5: 10 kW Commercial Solar in Puri -->
                 <div class="flex-shrink-0" style="width: 360px; max-width: 85vw;">
                     <div class="testimonial-card p-4 h-100 d-flex flex-column justify-content-between">
                         <div>
-                            <div class="quote-symbol text-navy mb-3">
-                                <i class="bi bi-quote"></i>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="badge bg-dark text-white px-2 py-1 small fw-bold">
+                                    <i class="bi bi-building-fill me-1"></i> 10 kW Commercial EPC
+                                </span>
+                                <span class="badge bg-light text-muted border">Hospitality Facility</span>
                             </div>
-                            <p class="testimonial-quote-text mb-4">
-                                “From net-metering paperwork to rooftop mounting, the engineering team handled everything seamlessly.”
+                            <h4 class="fw-bold text-navy fs-6 mb-2">VIP Road, Puri</h4>
+                            <p class="text-muted small mb-3">
+                                Commercial solar plant with marine-grade hot-dip galvanized mounting structure engineered to resist saline coastal winds (180 km/h cyclone rating).
                             </p>
-                        </div>
-                        <div class="d-flex align-items-center gap-3">
-                            <img src="<?= Url::to('@web/images/user_rohit.webp') ?>" alt="Vikram Patel" class="user-avatar-round">
-                            <div>
-                                <h4 class="user-author-name mb-0">Vikram Patel</h4>
-                                <div class="user-city text-muted small mb-1">Ahmedabad</div>
-                                <div class="user-rating-stars text-warning small">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
+                            <div class="p-2 rounded bg-light border mb-3 small">
+                                <div class="d-flex justify-content-between text-muted mb-1">
+                                    <span>Operating Tariff Cut:</span>
+                                    <span class="fw-bold text-success">~70% Commercial Power Cut</span>
+                                </div>
+                                <div class="d-flex justify-content-between text-muted">
+                                    <span>Remote Monitoring:</span>
+                                    <span class="fw-bold text-navy">Live Wi-Fi Cloud App</span>
                                 </div>
                             </div>
+                        </div>
+                        <div class="border-top pt-3 d-flex align-items-center justify-content-between small text-muted">
+                            <span><i class="bi bi-geo-alt-fill text-orange me-1"></i>VIP Road, Puri</span>
+                            <span class="text-success fw-semibold"><i class="bi bi-patch-check-fill me-1"></i>Commissioned</span>
                         </div>
                     </div>
                 </div>
@@ -1145,33 +1305,36 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                                     <h4 class="fw-bold text-navy fs-5 mb-0">Official PM Surya Ghar Subsidy Slabs</h4>
                                     <span class="badge bg-success-subtle text-success border border-success-subtle">MNRE, Govt. of India</span>
                                 </div>
-                                <div class="table-responsive mb-3">
+                                <div class="table-responsive mb-2">
                                     <table class="table table-sm table-bordered align-middle mb-0 small">
                                         <thead class="table-light">
                                             <tr>
-                                                <th>Avg. Monthly Consumption</th>
-                                                <th>Suitable Plant Capacity</th>
-                                                <th>Official Govt. Subsidy</th>
+                                                <th>Eligible Rooftop Capacity</th>
+                                                <th>Central Subsidy (CFA)</th>
+                                                <th>Official Calculation Rule</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td class="text-muted">0 – 150 Units</td>
-                                                <td class="fw-bold text-navy">1 kW System</td>
+                                                <td class="fw-bold text-navy">1 kW</td>
                                                 <td class="fw-bold text-success">₹30,000</td>
+                                                <td class="text-muted">₹30,000 for the 1st kW</td>
                                             </tr>
                                             <tr>
-                                                <td class="text-muted">150 – 300 Units</td>
-                                                <td class="fw-bold text-navy">2 kW System</td>
+                                                <td class="fw-bold text-navy">2 kW</td>
                                                 <td class="fw-bold text-success">₹60,000</td>
+                                                <td class="text-muted">₹30,000 per kW (up to 2 kW)</td>
                                             </tr>
                                             <tr style="background-color: #fff7ed;">
-                                                <td class="text-muted">Above 300 Units</td>
                                                 <td class="fw-bold text-navy">3 kW &amp; Above <span class="badge bg-warning text-dark ms-1">Popular</span></td>
-                                                <td class="fw-bold text-orange">₹78,000</td>
+                                                <td class="fw-bold text-orange">₹78,000 <span class="badge bg-secondary ms-1">Max Cap</span></td>
+                                                <td class="text-muted">₹60,000 + ₹18,000 for 3rd kW (capped at ₹78,000)</td>
                                             </tr>
                                         </tbody>
                                     </table>
+                                </div>
+                                <div class="p-2 rounded bg-light border mb-3" style="font-size: 0.74rem; line-height: 1.45; color: #475569;">
+                                    <strong>*Important Eligibility &amp; Compliance Notes:</strong> Central Financial Assistance (CFA) applies strictly to residential individual households. Commercial and industrial consumers are not eligible for residential CFA (commercial entities can benefit from Section 32 40% accelerated tax depreciation). Actual subsidy disbursement depends on TPCODL/DISCOM technical feasibility approval and MNRE national portal verification. Guidelines can be verified at <a href="https://pmsuryaghar.gov.in" target="_blank" rel="noopener noreferrer" class="text-decoration-underline text-navy fw-semibold">pmsuryaghar.gov.in</a>.
                                 </div>
 
                                 <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 pt-2">
@@ -1250,7 +1413,7 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                             </h3>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body faq-answer-text">
-                                    Households receive ₹30,000 for a 1 kW system, ₹60,000 for a 2 kW system, and ₹78,000 Central Subsidy (plus up to ₹30,000 State Top-Up = ₹1,08,000 in states like UP) for systems 3 kW or higher, transferred directly to their bank account via DBT within 30 days of installation.
+                                    Under the PM Surya Ghar: Muft Bijli Yojana in Odisha, residential consumers receive a direct Central Government DBT subsidy of <strong>₹30,000 for a 1 kW system</strong>, <strong>₹60,000 for a 2 kW system</strong>, and <strong>₹78,000 for systems 3 kW or higher</strong>. The subsidy is credited directly to your bank account via Direct Benefit Transfer (DBT) by MNRE following TPCODL / DISCOM inspection and net-meter commissioning.
                                 </div>
                             </div>
                         </div>
@@ -1302,7 +1465,7 @@ $this->params['meta_keywords'] = 'PM Surya Ghar, rooftop solar, solar energy Ind
                 <!-- Right: Have More Questions Contact Box -->
                 <div class="col-lg-5">
                     <div class="faq-support-card position-relative rounded-4 overflow-hidden h-100 d-flex flex-column justify-content-end p-4 p-md-5">
-                        <img src="<?= Url::to('@web/images/faq_house.webp') ?>" alt="Solar Energy Support" class="faq-bg-image position-absolute top-0 start-0 w-100 h-100">
+                        <img src="<?= Url::to('@web/images/faq_house.webp') ?>" alt="Solar Powered House with Net Metering Consultation in Bhubaneswar" width="1024" height="1024" loading="lazy" decoding="async" class="faq-bg-image position-absolute top-0 start-0 w-100 h-100">
                         <div class="faq-card-overlay position-absolute top-0 start-0 w-100 h-100"></div>
                         
                         <div class="faq-card-content position-relative text-white">

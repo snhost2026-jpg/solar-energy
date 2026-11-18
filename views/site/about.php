@@ -5,9 +5,12 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-$this->title = 'About Us - Solar Energy';
-$this->params['meta_description'] = 'We are a team of clean energy enthusiasts, working to make solar simple, affordable and accessible for every home, business and community.';
-$this->params['meta_keywords'] = 'Solar Energy, About Us, Clean Energy, Renewable Energy India, Solar Panels, Solar Mission';
+$this->title = 'About OneSolar | Leading Solar EPC Company in Bhubaneswar, Odisha';
+$this->params['meta_description'] = 'OneSolar is Bhubaneswar\'s premier solar installation & EPC company located at Dumuduma. Authorized PM Surya Ghar partner with 10+ years engineering experience, 500+ commissioned installations across Odisha.';
+$this->params['meta_keywords'] = 'about OneSolar, solar company Bhubaneswar, solar panel installers Odisha, renewable energy Dumuduma, PM Surya Ghar vendor Bhubaneswar, solar EPC Odisha, authorized PM Surya Ghar partner, solar system maintenance Bhubaneswar';
+$this->params['og_title'] = 'About OneSolar | Leading Solar EPC Company in Bhubaneswar, Odisha';
+$this->params['og_description'] = 'Empowering homes, commercial enterprises, and agriculture across Odisha with clean, reliable solar power. Authorized PM Surya Ghar partner.';
+$this->params['og_image'] = Url::to('@web/images/about_who_we_are.webp', true);
 ?>
 
 <div class="about-page">
@@ -61,7 +64,10 @@ $this->params['meta_keywords'] = 'Solar Energy, About Us, Clean Energy, Renewabl
                 <div class="col-lg-6">
                     <div class="about-who-img-frame">
                         <img src="<?= Url::to('@web/images/about_who_we_are.webp') ?>" 
-                             alt="Modern villa powered by rooftop solar energy" 
+                             alt="Solar Energy Company Team installing rooftop solar panels in Bhubaneswar Odisha" 
+                             width="1200"
+                             height="896"
+                             decoding="async"
                              class="img-fluid about-who-img"
                              loading="lazy">
                     </div>
@@ -75,15 +81,15 @@ $this->params['meta_keywords'] = 'Solar Energy, About Us, Clean Energy, Renewabl
                     </div>
 
                     <h2 class="about-section-heading mb-3">
-                        Making Solar Simple<br>and Accessible
+                        Engineering Excellence<br>in Solar Energy
                     </h2>
 
                     <p class="about-body-text mb-3">
-                        Solar Energy is a dedicated team working towards a cleaner and greener tomorrow. We help homeowners, businesses and communities adopt solar power with the right guidance, quality products and end-to-end support.
+                        <strong>OneSolar</strong> is a premier solar EPC (Engineering, Procurement, and Construction) company based in Dumuduma, Bhubaneswar. We specialize in residential rooftop solar, commercial & industrial solar power plants, and agricultural solar pumping across Odisha.
                     </p>
 
                     <p class="about-body-text mb-0">
-                        From solar installations to expert advice, maintenance and after-sales service, we make the switch to solar simple, transparent and hassle-free.
+                        As an authorized PM Surya Ghar partner, our certified electrical engineers manage everything from structural shadow analysis and Tier-1 ALMM module procurement to TPCODL net-metering approvals and subsidy disbursement.
                     </p>
                 </div>
             </div>
@@ -99,42 +105,37 @@ $this->params['meta_keywords'] = 'Solar Energy, About Us, Clean Energy, Renewabl
                 <!-- Stat 1 -->
                 <div class="col-6 col-md-3 stat-col stat-col-divider">
                     <div class="stat-icon-wrap mb-2">
-                        <i class="bi bi-people-fill"></i>
+                        <i class="bi bi-patch-check-fill text-warning"></i>
                     </div>
-                    <div class="stat-number">10,000+</div>
-                    <div class="stat-text">Happy Customers</div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-text">Rooftop Solar Installations</div>
                 </div>
 
                 <!-- Stat 2 -->
                 <div class="col-6 col-md-3 stat-col stat-col-divider">
                     <div class="stat-icon-wrap mb-2">
-                        <i class="bi bi-lightning-charge-fill"></i>
+                        <i class="bi bi-clock-history text-info"></i>
                     </div>
-                    <div class="stat-number">50MW+</div>
-                    <div class="stat-text">Clean Energy Installed</div>
+                    <div class="stat-number">10+ Yrs</div>
+                    <div class="stat-text">Combined Engineering Experience</div>
                 </div>
 
                 <!-- Stat 3 -->
                 <div class="col-6 col-md-3 stat-col stat-col-divider">
                     <div class="stat-icon-wrap mb-2">
-                        <i class="bi bi-gear-fill"></i>
+                        <i class="bi bi-speedometer2 text-success"></i>
                     </div>
-                    <div class="stat-number">99%</div>
-                    <div class="stat-text">Service Satisfaction</div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-text">TPCODL Net-Meter Compliance</div>
                 </div>
 
                 <!-- Stat 4 -->
                 <div class="col-6 col-md-3 stat-col">
                     <div class="stat-icon-wrap mb-2">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display:inline-block; vertical-align:middle;">
-                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11.06 6.03C12.42 5.09 14.18 5.48 15.11 6.84C15.65 7.63 15.75 8.6 15.44 9.46C16.89 8.7 18.73 9.21 19.5 10.66C20.25 12.06 19.74 13.84 18.34 14.59L17.15 15.22C16.86 16.65 15.82 17.81 14.4 18.27C12.72 18.82 10.9 17.9 10.35 16.22C10.15 15.61 10.16 14.97 10.35 14.39C9.25 14.88 7.95 14.52 7.28 13.54C6.46 12.33 6.77 10.69 7.98 9.87C8.74 9.35 9.71 9.41 10.42 9.94C10.22 8.71 10.95 7.51 12.23 7.21L11.06 6.03Z" opacity="0.3"/>
-                            <path d="M12 22C17.5228 22 22 17.5228 22 12H2C2 17.5228 6.47715 22 12 22Z" fill="none"/>
-                            <path d="M17 12C17 7.5 13 4 7 4C7 8.5 11 12 17 12Z"/>
-                            <path d="M7 12C7 16.5 11 20 17 20C17 15.5 13 12 7 12Z" opacity="0.6"/>
-                        </svg>
+                        <i class="bi bi-shield-fill-check text-orange"></i>
                     </div>
-                    <div class="stat-number">20+</div>
-                    <div class="stat-text">States Covered</div>
+                    <div class="stat-number">25 Yrs</div>
+                    <div class="stat-text">Panel Performance Warranty</div>
                 </div>
             </div>
         </div>
@@ -159,7 +160,7 @@ $this->params['meta_keywords'] = 'Solar Energy, About Us, Clean Energy, Renewabl
                         <div class="card-content">
                             <h3 class="card-heading mb-2">Our Mission</h3>
                             <p class="card-desc mb-0">
-                                To make clean and affordable solar energy simple and accessible for every home and business.
+                                To make clean, reliable and affordable solar energy accessible to every homeowner, commercial establishment and agricultural community across Odisha with zero administrative hassle.
                             </p>
                         </div>
                     </div>
@@ -177,9 +178,102 @@ $this->params['meta_keywords'] = 'Solar Energy, About Us, Clean Energy, Renewabl
                         <div class="card-content">
                             <h3 class="card-heading mb-2">Our Vision</h3>
                             <p class="card-desc mb-0">
-                                A cleaner, brighter and more sustainable future through renewable solar energy for a better, greener tomorrow.
+                                To lead Odisha's clean energy transition by delivering high-efficiency, cyclone-resilient solar infrastructure backed by transparent engineering and dependable local after-sales service.
                             </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4B: ENGINEERING STANDARDS & LOCAL CREDIBILITY
+         ========================================================================= -->
+    <section class="about-credentials-section py-5 bg-light-soft border-top border-bottom">
+        <div class="container">
+            <div class="text-center mb-5" style="max-width: 780px; margin: 0 auto;">
+                <div class="about-eyebrow justify-content-center mb-2">
+                    <span class="eyebrow-dash"></span>
+                    <span class="eyebrow-label">ENGINEERING INTEGRITY</span>
+                </div>
+                <h2 class="about-section-heading mb-2">Why Odisha Trusts OneSolar</h2>
+                <p class="text-muted mb-0">
+                    Solar is a 25-year technical commitment. We combine certified engineering practices, Tier-1 hardware, and complete local DISCOM compliance.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Pillar 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 rounded-4 p-4 h-100 bg-white shadow-sm">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 48px; height: 48px; background-color: #fff7ed; color: #ea580c; font-size: 1.35rem;">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4 class="fw-bold text-navy fs-6 mb-2">ALMM-Listed Tier-1 Modules</h4>
+                        <p class="text-muted small mb-0">
+                            We install exclusively MNRE ALMM-approved Monocrystalline Bifacial &amp; TopCon modules from leading manufacturers (Loom Solar, Waaree, Adani, Vikram) backed by 25-year performance warranties.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 rounded-4 p-4 h-100 bg-white shadow-sm">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 48px; height: 48px; background-color: #f0fdf4; color: #16a34a; font-size: 1.35rem;">
+                            <i class="bi bi-wind"></i>
+                        </div>
+                        <h4 class="fw-bold text-navy fs-6 mb-2">180 km/h Cyclone Resilient</h4>
+                        <p class="text-muted small mb-0">
+                            Custom elevated Hot-Dip Galvanized (HDG) mounting structures with SS304 fasteners and chemical anchor bolting, engineered specifically to withstand coastal Odisha's cyclonic wind loads.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 rounded-4 p-4 h-100 bg-white shadow-sm">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 48px; height: 48px; background-color: #eff6ff; color: #2563eb; font-size: 1.35rem;">
+                            <i class="bi bi-file-earmark-check"></i>
+                        </div>
+                        <h4 class="fw-bold text-navy fs-6 mb-2">Full DISCOM Net-Metering</h4>
+                        <p class="text-muted small mb-0">
+                            End-to-end liaison with TPCODL, TPNODL &amp; TPSODL: from online feasibility approval to bi-directional meter testing and MNRE portal subsidy claiming without paperwork stress.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 rounded-4 p-4 h-100 bg-white shadow-sm">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3" style="width: 48px; height: 48px; background-color: #faf5ff; color: #9333ea; font-size: 1.35rem;">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <h4 class="fw-bold text-navy fs-6 mb-2">Triple Safety Protection</h4>
+                        <p class="text-muted small mb-0">
+                            Complete electrical protection: dual chemical earthing pits, copper bonded lightning arresters, and Class-II Surge Protection Devices (SPDs) to protect your home electronics from surges.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Company Registered Details Banner -->
+            <div class="card border-0 rounded-4 p-4 mt-4 bg-white shadow-sm">
+                <div class="row align-items-center g-3">
+                    <div class="col-lg-8">
+                        <div class="d-flex align-items-center gap-2 mb-1">
+                            <span class="badge bg-navy text-white px-2 py-1 small">Local Registered EPC</span>
+                            <span class="text-muted small">Bhubaneswar, Odisha</span>
+                        </div>
+                        <h4 class="fw-bold text-navy fs-6 mb-1">OneSolar Energy Solutions Odisha</h4>
+                        <p class="text-muted small mb-0">
+                            Registered Office: Plot No. 124, Near Archana Enclave, Dumuduma, Bhubaneswar - 751019. In-house engineering team, licensed electrical supervisors, and dedicated local maintenance technicians.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="<?= Url::to(['/site/contact']) ?>" class="btn btn-outline-primary btn-sm fw-semibold rounded-pill px-3 py-2">
+                            <i class="bi bi-telephone-fill me-1"></i> Speak to Our Chief Engineer
+                        </a>
                     </div>
                 </div>
             </div>
@@ -219,7 +313,10 @@ $this->params['meta_keywords'] = 'Solar Energy, About Us, Clean Energy, Renewabl
                 <div class="col-lg-6">
                     <div class="about-journey-img-frame">
                         <img src="<?= Url::to('@web/images/about_journey_family.webp') ?>" 
-                             alt="Family overlooking sunset skyline representing sustainable future" 
+                             alt="Clean energy future for Indian families adopting PM Surya Ghar solar rooftops" 
+                             width="1376"
+                             height="768"
+                             decoding="async"
                              class="img-fluid about-journey-img"
                              loading="lazy">
                     </div>

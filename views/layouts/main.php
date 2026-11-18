@@ -18,6 +18,12 @@ $this->render('_head');
     <?php $this->head() ?>
     <title><?= Html::encode($this->title) ?></title>
 
+    <?php if (!empty($this->params['schema_jsonld'])): ?>
+    <script type="application/ld+json">
+<?= json_encode($this->params['schema_jsonld'], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>
+    </script>
+    <?php endif; ?>
+
     <?php
     $this->registerLinkTag([
         'rel' => 'icon',

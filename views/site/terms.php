@@ -7,9 +7,9 @@ declare(strict_types=1);
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-$this->title = 'Terms & Conditions - Solar Energy';
-$this->params['meta_description'] = 'Read the Terms & Conditions of Solar Energy. Learn about solar quotation terms, PM Surya Ghar subsidy guidelines, installation warranties, and site responsibilities.';
-$this->params['meta_keywords'] = 'Solar Energy Terms and Conditions, Solar Installation Warranty, PM Surya Ghar Subsidy Terms, Solar Panel Guarantee Odisha';
+$this->title = 'Terms & Conditions - OneSolar';
+$this->params['meta_description'] = 'Read the Terms & Conditions of OneSolar. Learn about solar quotation terms, PM Surya Ghar subsidy guidelines, installation warranties, and site responsibilities.';
+$this->params['meta_keywords'] = 'OneSolar Terms and Conditions, Solar Installation Warranty, PM Surya Ghar Subsidy Terms, Solar Panel Guarantee Odisha';
 ?>
 
 <div class="terms-conditions-page bg-light min-vh-100 pb-5">

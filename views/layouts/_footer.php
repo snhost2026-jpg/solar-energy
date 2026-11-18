@@ -14,15 +14,14 @@ use yii\helpers\Url;
             <!-- Brand & Mission Column -->
             <div class="col-lg-4 col-md-6">
                 <a class="footer-brand d-inline-flex align-items-center gap-2 mb-3 text-decoration-none" href="<?= Yii::$app->homeUrl ?>">
-                    <img src="<?= Url::to('@web/images/logo.png') ?>" alt="Solar Energy" height="42" class="solar-logo-img">
+                    <img src="<?= Url::to('@web/images/logo.png') ?>" alt="OneSolar" height="42" class="solar-logo-img">
                     <div class="solar-brand-text">
-                        <span class="brand-solar text-white">Solar</span>
-                        <span class="brand-energy" style="color: #f97316;">Energy</span>
+                        <span class="brand-solar text-white">One</span>
+                        <span class="brand-energy" style="color: #f97316;">Solar</span>
                     </div>
                 </a>
                 <p class="footer-mission-text mb-4 text-white-75" style="max-width: 340px; font-size: 0.925rem; line-height: 1.6;">
-                    Clean energy for a brighter tomorrow.<br>
-                    We provide reliable solar products and solutions to help every home make the switch to solar.
+                    <strong>OneSolar</strong> — Premier rooftop solar installation and PM Surya Ghar subsidy partner in Bhubaneswar, Odisha. We empower homes, commercial buildings, and agriculture with clean, reliable solar power.
                 </p>
 <?php
 $socials = Yii::$app->params['socials'] ?? [];
@@ -55,6 +54,7 @@ $facebookUrl = $socials['facebook'] ?? 'https://www.facebook.com/profile.php?id=
                     <li><a href="<?= Url::to(['/site/about']) ?>">About Us</a></li>
                     <li><a href="<?= Url::to(['/site/products']) ?>">Products</a></li>
                     <li><a href="<?= Url::to(['/site/services']) ?>">Services</a></li>
+                    <li><a href="<?= Url::to(['/site/blog']) ?>">Solar Guides</a></li>
                     <li><a href="<?= Url::to(['/site/index', '#' => 'pm-surya-ghar']) ?>">PM Surya Ghar</a></li>
                     <li><a href="<?= Url::to(['/site/contact']) ?>">Contact</a></li>
                 </ul>
@@ -109,7 +109,7 @@ $facebookUrl = $socials['facebook'] ?? 'https://www.facebook.com/profile.php?id=
                     </li>
                     <li class="d-flex align-items-start gap-2">
                         <i class="bi bi-geo-alt text-white fs-5"></i>
-                        <span>Dumuduma, Near Archana Enclave</span>
+                        <span>Plot No. 124, Near Archana Enclave, Dumuduma, Bhubaneswar - 751019</span>
                     </li>
                 </ul>
             </div>
@@ -121,7 +121,7 @@ $facebookUrl = $socials['facebook'] ?? 'https://www.facebook.com/profile.php?id=
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center small">
             <!-- Left Side: Copyright & Discreet Admin Access (Clear of WhatsApp widget) -->
             <div class="copyright-text text-white-50 d-flex flex-wrap align-items-center justify-content-center justify-content-md-start gap-2">
-                <span>&copy; <?= date('Y') ?> Solar Energy. All rights reserved.</span>
+                <span>&copy; <?= date('Y') ?> OneSolar. All rights reserved.</span>
                 <span class="opacity-25 d-none d-md-inline">|</span>
                 <?php if (Yii::$app->user->isGuest): ?>
                     <a href="<?= Url::to(['/site/login']) ?>" class="footer-admin-discreet-btn" title="Organization Admin Login">
@@ -136,13 +136,13 @@ $facebookUrl = $socials['facebook'] ?? 'https://www.facebook.com/profile.php?id=
                 <?php endif; ?>
             </div>
 
-            <!-- Right Side: Legal Links -->
-            <div class="footer-legal-links mt-2 mt-md-0 text-white-50 d-flex align-items-center">
-                <a href="<?= Url::to(['/site/privacy']) ?>" class="legal-link text-white-50 text-decoration-none">Privacy Policy</a>
-                <span class="mx-3 opacity-50">|</span>
-                <a href="<?= Url::to(['/site/terms']) ?>" class="legal-link text-white-50 text-decoration-none">Terms &amp; Conditions</a>
-                <span class="mx-3 opacity-50">|</span>
-                <a href="<?= Url::to(['/site/sitemap']) ?>" class="legal-link text-white-50 text-decoration-none">Sitemap</a>
+            <!-- Right Side: Legal Links (Shifted left to ensure zero overlap with floating WhatsApp widget) -->
+            <div class="footer-legal-links mt-2 mt-md-0 text-white-50 d-flex align-items-center" style="margin-right: 250px;">
+                <a href="<?= Url::to(['/site/privacy']) ?>" class="legal-link">Privacy Policy</a>
+                <span class="footer-legal-divider">|</span>
+                <a href="<?= Url::to(['/site/terms']) ?>" class="legal-link">Terms &amp; Conditions</a>
+                <span class="footer-legal-divider">|</span>
+                <a href="<?= Url::to(['/site/sitemap']) ?>" class="legal-link">Sitemap</a>
             </div>
         </div>
     </div>

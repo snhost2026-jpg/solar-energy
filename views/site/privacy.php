@@ -7,9 +7,9 @@ declare(strict_types=1);
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-$this->title = 'Privacy Policy - Solar Energy';
-$this->params['meta_description'] = 'Read the Privacy Policy of Solar Energy. Learn how we handle customer inquiry data, mobile numbers, site survey details, and PM Surya Ghar subsidy information.';
-$this->params['meta_keywords'] = 'Solar Energy Privacy Policy, Customer Data Protection, Solar Inquiry Privacy, PM Surya Ghar Odisha';
+$this->title = 'Privacy Policy - OneSolar';
+$this->params['meta_description'] = 'Read the Privacy Policy of OneSolar. Learn how we handle customer inquiry data, mobile numbers, site survey details, and PM Surya Ghar subsidy information.';
+$this->params['meta_keywords'] = 'OneSolar Privacy Policy, Customer Data Protection, Solar Inquiry Privacy, PM Surya Ghar Odisha';
 ?>
 
 <div class="privacy-policy-page bg-light min-vh-100 pb-5">

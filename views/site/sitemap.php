@@ -7,9 +7,9 @@ declare(strict_types=1);
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-$this->title = 'Sitemap - Solar Energy';
-$this->params['meta_description'] = 'Explore the complete sitemap of Solar Energy. Find links to all solar panels, inverters, batteries, solar water pumps, heaters, services, and PM Surya Ghar information.';
-$this->params['meta_keywords'] = 'Solar Energy Sitemap, Solar Products Directory, PM Surya Ghar Odisha, Solar Solutions Links';
+$this->title = 'Sitemap - OneSolar';
+$this->params['meta_description'] = 'Explore the complete sitemap of OneSolar. Find links to all solar panels, inverters, batteries, solar water pumps, heaters, services, and PM Surya Ghar information.';
+$this->params['meta_keywords'] = 'OneSolar Sitemap, Solar Products Directory, PM Surya Ghar Odisha, Solar Solutions Links';
 ?>
 
 <div class="sitemap-page bg-light min-vh-100 pb-5">
@@ -91,6 +91,12 @@ $this->params['meta_keywords'] = 'Solar Energy Sitemap, Solar Products Directory
                                     <i class="bi bi-envelope-fill text-orange me-2"></i> Contact Us
                                 </a>
                                 <span class="badge bg-light text-muted border">Inquiries</span>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-between">
+                                <a href="<?= Url::to(['/site/blog']) ?>" class="text-decoration-none fw-semibold text-navy hover-orange">
+                                    <i class="bi bi-journal-text text-orange me-2"></i> Solar Guides &amp; Blog
+                                </a>
+                                <span class="badge bg-light text-muted border">Resources</span>
                             </li>
                             <li class="d-flex align-items-center justify-content-between">
                                 <a href="<?= Url::to(['/site/index', '#' => 'pm-surya-ghar']) ?>" class="text-decoration-none fw-semibold text-navy hover-orange">
@@ -254,8 +260,9 @@ $this->params['meta_keywords'] = 'Solar Energy Sitemap, Solar Products Directory
                             <div class="col-12">
                                 <div class="d-flex align-items-center justify-content-between p-3 rounded-3 border bg-white">
                                     <div>
-                                        <div class="fw-bold text-navy">Direct Helpline</div>
-                                        <div class="small text-muted">Available Monday to Saturday, 9:00 AM – 7:00 PM</div>
+                                        <div class="fw-bold text-navy">Direct Helpline &amp; Office Hours</div>
+                                        <div class="small text-muted">Monday – Saturday: 9:00 AM – 7:00 PM | Sunday: 10:00 AM – 4:00 PM</div>
+                                        <div class="small text-muted mt-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i>Plot No. 124, Near Archana Enclave, Dumuduma, Bhubaneswar - 751019</div>
                                     </div>
                                     <a href="tel:8658868780" class="btn btn-sm btn-success fw-bold">
                                         <i class="bi bi-telephone-fill me-1"></i> +91 86588 68780

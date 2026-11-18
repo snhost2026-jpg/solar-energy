@@ -5,9 +5,12 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-$this->title = 'Our Services - Solar Energy';
-$this->params['meta_description'] = 'From rooftop solar to complete solar solutions, we help homes, businesses and communities make the switch to clean and reliable energy.';
-$this->params['meta_keywords'] = 'Solar Services, On-Grid Solar, Off-Grid Solar, Hybrid Solar, Rooftop Solar, Solar Street Lighting, Solar Water Pump, Solar Water Heating, Solar EV Charging, PM Surya Ghar';
+$this->title = 'Rooftop, On-Grid & Commercial Solar Solutions Odisha | OneSolar';
+$this->params['meta_description'] = 'OneSolar provides turnkey residential, commercial (10kW–100kW+) & industrial rooftop solar EPC services in Bhubaneswar & Odisha. DISCOM net-metering & up to ₹78,000 PM Surya Ghar subsidy.';
+$this->params['meta_keywords'] = 'solar panel installation cost in Bhubaneswar, commercial rooftop solar installation Odisha, industrial solar power plant installation Odisha, residential solar EPC company Odisha, solar panel installation for home Odisha, on-grid solar installation cost Bhubaneswar, 10kW commercial solar system price, 20kW solar plant installation cost, 50kW industrial solar installation, 100kW rooftop solar EPC cost, OneSolar services';
+$this->params['og_title'] = 'Rooftop, On-Grid & Commercial Solar Solutions Odisha | OneSolar';
+$this->params['og_description'] = 'Turnkey residential and commercial solar installations in Odisha with up to ₹78,000 PM Surya Ghar subsidy and DISCOM net metering.';
+$this->params['og_image'] = Url::to('@web/images/services_hero_banner.webp', true);
 ?>
 
 <div class="services-page">
@@ -77,7 +80,10 @@ $this->params['meta_keywords'] = 'Solar Services, On-Grid Solar, Off-Grid Solar,
                     <a href="<?= Url::to(['/site/contact', 'topic' => 'On-Grid Solar System']) ?>" class="service-solution-card service-card-lg h-100 text-decoration-none">
                         <div class="service-card-img-wrap">
                             <img src="<?= Url::to('@web/images/hero_solar_house.webp') ?>" 
-                                 alt="On-Grid Solar System" 
+                                 alt="Residential On-Grid Rooftop Solar Installation in Bhubaneswar" 
+                                 width="1376"
+                                 height="768"
+                                 decoding="async"
                                  class="service-card-img"
                                  loading="lazy">
                         </div>
@@ -107,7 +113,10 @@ $this->params['meta_keywords'] = 'Solar Services, On-Grid Solar, Off-Grid Solar,
                     <a href="<?= Url::to(['/site/contact', 'topic' => 'Off-Grid Solar System']) ?>" class="service-solution-card service-card-lg h-100 text-decoration-none">
                         <div class="service-card-img-wrap">
                             <img src="<?= Url::to('@web/images/services_offgrid_solar.webp') ?>" 
-                                 alt="Off-Grid Solar System" 
+                                 alt="Off-Grid Solar System with Battery Storage in Odisha" 
+                                 width="1200"
+                                 height="896"
+                                 decoding="async"
                                  class="service-card-img"
                                  loading="lazy">
                         </div>
@@ -138,7 +147,10 @@ $this->params['meta_keywords'] = 'Solar Services, On-Grid Solar, Off-Grid Solar,
                     <a href="<?= Url::to(['/site/contact', 'topic' => 'Hybrid Solar System']) ?>" class="service-solution-card service-card-lg h-100 text-decoration-none">
                         <div class="service-card-img-wrap">
                             <img src="<?= Url::to('@web/images/services_hybrid_solar.webp') ?>" 
-                                 alt="Hybrid Solar System" 
+                                 alt="Hybrid Solar System with Automatic Grid and Battery Switchover" 
+                                 width="1200"
+                                 height="896"
+                                 decoding="async"
                                  class="service-card-img"
                                  loading="lazy">
                         </div>
@@ -166,7 +178,10 @@ $this->params['meta_keywords'] = 'Solar Services, On-Grid Solar, Off-Grid Solar,
                 <a href="<?= Url::to(['/site/contact', 'topic' => 'Rooftop Solar Installation']) ?>" class="service-solution-card service-card-sm h-100 text-decoration-none">
                     <div class="service-card-img-wrap">
                         <img src="<?= Url::to('@web/images/solar_panels.webp') ?>" 
-                             alt="Rooftop Solar" 
+                             alt="Rooftop Solar EPC Installation for Homes and Commercial Buildings in Odisha" 
+                             width="1200"
+                             height="896"
+                             decoding="async"
                              class="service-card-img"
                              loading="lazy">
                     </div>
@@ -195,7 +210,10 @@ $this->params['meta_keywords'] = 'Solar Services, On-Grid Solar, Off-Grid Solar,
                 <a href="<?= Url::to(['/site/contact', 'topic' => 'Solar Street Lighting']) ?>" class="service-solution-card service-card-sm h-100 text-decoration-none">
                     <div class="service-card-img-wrap">
                         <img src="<?= Url::to('@web/images/services_street_lighting.webp') ?>" 
-                             alt="Solar Street Lighting" 
+                             alt="Solar Street Lighting Solutions for Roads, Societies and Campuses in Odisha" 
+                             width="1200"
+                             height="896"
+                             decoding="async"
                              class="service-card-img"
                              loading="lazy">
                     </div>
@@ -223,7 +241,10 @@ $this->params['meta_keywords'] = 'Solar Services, On-Grid Solar, Off-Grid Solar,
                 <a href="<?= Url::to(['/site/contact', 'topic' => 'Solar Water Pump']) ?>" class="service-solution-card service-card-sm h-100 text-decoration-none">
                     <div class="service-card-img-wrap">
                         <img src="<?= Url::to('@web/images/services_water_pump.webp') ?>" 
-                             alt="Solar Water Pump" 
+                             alt="Agricultural Solar Water Pumping Systems for PM KUSUM Yojana" 
+                             width="1200"
+                             height="896"
+                             decoding="async"
                              class="service-card-img"
                              loading="lazy">
                     </div>
@@ -247,7 +268,10 @@ $this->params['meta_keywords'] = 'Solar Services, On-Grid Solar, Off-Grid Solar,
                 <a href="<?= Url::to(['/site/contact', 'topic' => 'Solar Water Heating']) ?>" class="service-solution-card service-card-sm h-100 text-decoration-none">
                     <div class="service-card-img-wrap">
                         <img src="<?= Url::to('@web/images/services_water_heating.webp') ?>" 
-                             alt="Solar Water Heating" 
+                             alt="Commercial and Domestic Solar Water Heating Systems in Bhubaneswar" 
+                             width="1200"
+                             height="896"
+                             decoding="async"
                              class="service-card-img"
                              loading="lazy">
                     </div>
@@ -273,7 +297,10 @@ $this->params['meta_keywords'] = 'Solar Services, On-Grid Solar, Off-Grid Solar,
                 <a href="<?= Url::to(['/site/contact', 'topic' => 'Solar EV Charging']) ?>" class="service-solution-card service-card-sm h-100 text-decoration-none">
                     <div class="service-card-img-wrap">
                         <img src="<?= Url::to('@web/images/services_ev_charging.webp') ?>" 
-                             alt="Solar EV Charging" 
+                             alt="Solar Powered EV Charging Station and Carport Installation" 
+                             width="1200"
+                             height="896"
+                             decoding="async"
                              class="service-card-img"
                              loading="lazy">
                     </div>
@@ -331,7 +358,10 @@ $this->params['meta_keywords'] = 'Solar Services, On-Grid Solar, Off-Grid Solar,
                 <div class="col-lg-4">
                     <div class="services-scheme-img-frame">
                         <img src="<?= Url::to('@web/images/hero_solar_house.webp') ?>" 
-                             alt="PM Surya Ghar Rooftop Solar Home" 
+                             alt="PM Surya Ghar Muft Bijli Yojana Rooftop Solar Home in Odisha" 
+                             width="1376"
+                             height="768"
+                             decoding="async"
                              class="img-fluid services-scheme-img"
                              loading="lazy">
                     </div>
@@ -383,6 +413,243 @@ $this->params['meta_keywords'] = 'Solar Services, On-Grid Solar, Off-Grid Solar,
                                 <p class="scheme-item-desc mb-0">Help with grid connection and net metering process.</p>
                             </div>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3B: TECHNICAL GUIDE & SYSTEM COMPARISON (DEEP SERVICE KNOWLEDGE)
+         ========================================================================= -->
+    <section class="services-technical-depth py-5 bg-white border-top border-bottom">
+        <div class="container py-lg-3">
+            <div class="text-center mb-5" style="max-width: 800px; margin: 0 auto;">
+                <div class="about-eyebrow justify-content-center mb-2">
+                    <span class="eyebrow-dash"></span>
+                    <span class="eyebrow-label">SYSTEM ARCHITECTURE &amp; SPECIFICATIONS</span>
+                </div>
+                <h2 class="services-section-heading mb-2">How Each Solar System Works</h2>
+                <p class="text-muted mb-0">
+                    Understanding the operational differences between On-Grid, Hybrid, Off-Grid and Commercial solar helps you choose the highest-ROI installation for your property.
+                </p>
+            </div>
+
+            <!-- Deep Dive 1: On-Grid Solar Systems -->
+            <div class="card border-0 rounded-4 shadow-sm mb-4 overflow-hidden">
+                <div class="card-header bg-navy text-white p-4 d-flex flex-wrap align-items-center justify-content-between gap-2" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+                    <div>
+                        <span class="badge bg-warning text-dark fw-bold mb-1"><i class="bi bi-patch-check-fill me-1"></i>Most Popular for Homes</span>
+                        <h3 class="fw-bold text-white fs-5 mb-0">1. On-Grid Solar Systems (Grid-Tied with Net Metering)</h3>
+                    </div>
+                    <span class="text-white-50 small">Eligible for up to ₹78,000 PM Surya Ghar Central DBT</span>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <h4 class="fw-bold text-navy fs-6 mb-2"><i class="bi bi-gear-wide-connected text-primary me-2"></i>How It Operates</h4>
+                            <p class="text-muted small mb-3">
+                                Rooftop solar panels generate Direct Current (DC) power from sunlight. The grid-tied string inverter synchronizes with your DISCOM (TPCODL) supply frequency (50 Hz) and converts it to 230V/415V Alternating Current (AC). This power feeds your household loads first; any surplus is exported to the electrical grid through a bi-directional net meter. At night, you seamlessly draw power from the grid, and exported units are deducted from your monthly bill.
+                            </p>
+                            <h4 class="fw-bold text-navy fs-6 mb-2"><i class="bi bi-rulers text-primary me-2"></i>Installation &amp; Roof Prerequisites</h4>
+                            <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-1">
+                                <li>&bull; <strong>Roof Space:</strong> Approximately 80–100 sq.ft of shadow-free RCC or tin-shed terrace per 1 kW (250–300 sq.ft for a standard 3 kW system).</li>
+                                <li>&bull; <strong>Grid Requirement:</strong> Active domestic or commercial power connection with valid DISCOM consumer number.</li>
+                                <li>&bull; <strong>Structure:</strong> Elevated or flush Hot-Dip Galvanized (HDG) mounting structure designed for coastal wind loads.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 border-start-lg">
+                            <h4 class="fw-bold text-navy fs-6 mb-2"><i class="bi bi-wallet2 text-success me-2"></i>Financials, ROI &amp; Subsidy</h4>
+                            <div class="p-3 bg-light rounded-3 mb-3 small">
+                                <div class="d-flex justify-content-between text-muted mb-1">
+                                    <span>Typical 3 kW System Cost:</span>
+                                    <span class="fw-semibold text-navy">~₹1,80,000 – ₹2,10,000</span>
+                                </div>
+                                <div class="d-flex justify-content-between text-muted mb-1">
+                                    <span>PM Surya Ghar Central DBT:</span>
+                                    <span class="fw-bold text-success">- ₹78,000 Direct Credit</span>
+                                </div>
+                                <div class="d-flex justify-content-between border-top pt-1 fw-bold">
+                                    <span class="text-navy">Net Investment:</span>
+                                    <span class="text-success">~₹1,02,000 – ₹1,32,000</span>
+                                </div>
+                                <div class="d-flex justify-content-between text-muted mt-2 pt-1 border-top" style="font-size: 0.78rem;">
+                                    <span>Estimated Payback Period:</span>
+                                    <span class="fw-bold text-navy">3.5 to 4 Years (with 25-yr generation)</span>
+                                </div>
+                            </div>
+                            <div class="alert alert-warning py-2 px-3 small mb-0 border-0">
+                                <strong>Safety Note (Anti-Islanding):</strong> During a DISCOM grid blackout, on-grid inverters shut down instantly (within milliseconds) to safeguard line workers repairing electrical poles. For blackout backup, choose a Hybrid system below.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deep Dive 2: Hybrid Solar Systems -->
+            <div class="card border-0 rounded-4 shadow-sm mb-4 overflow-hidden">
+                <div class="card-header bg-navy text-white p-4 d-flex flex-wrap align-items-center justify-content-between gap-2" style="background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);">
+                    <div>
+                        <span class="badge bg-warning text-dark fw-bold mb-1"><i class="bi bi-battery-charging me-1"></i>Power Cut Security</span>
+                        <h3 class="fw-bold text-white fs-5 mb-0">2. Hybrid Solar Systems (Grid-Tied + Battery Energy Storage)</h3>
+                    </div>
+                    <span class="text-white-50 small">Best for areas with frequent power cuts or summer voltage drops</span>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <h4 class="fw-bold text-navy fs-6 mb-2"><i class="bi bi-cpu text-primary me-2"></i>How It Operates</h4>
+                            <p class="text-muted small mb-3">
+                                A hybrid solar system combines the bill-cutting benefits of on-grid solar with the security of a battery backup. When sunlight is available, it powers your home, charges a dedicated Lithium (LiFePO4) or tubular battery bank, and exports excess units to the grid. If the grid cuts out, an automatic transfer switch isolates from the grid within 10 milliseconds, powering critical loads (lights, fans, Wi-Fi, refrigerators, and air conditioning) without interruption.
+                            </p>
+                            <h4 class="fw-bold text-navy fs-6 mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Ideal Applications in Odisha</h4>
+                            <p class="text-muted small mb-0">
+                                Ideal for duplexes, clinics, diagnostic centers, and coastal areas prone to power interruptions during Nor'westers (Kalbaisakhi) and summer heatwaves in Cuttack, Puri, and Bhubaneswar outskirts.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 border-start-lg">
+                            <h4 class="fw-bold text-navy fs-6 mb-2"><i class="bi bi-hdd-stack text-primary me-2"></i>Battery Storage Technology</h4>
+                            <ul class="list-unstyled small text-muted mb-3 d-flex flex-column gap-2">
+                                <li class="p-2 bg-light rounded">
+                                    <strong class="text-navy">Lithium Ferro Phosphate (LiFePO4):</strong> 95% depth of discharge, 6,000+ cycle life (10–12 years), zero maintenance, wall-mountable compact design.
+                                </li>
+                                <li class="p-2 bg-light rounded">
+                                    <strong class="text-navy">Solar Tubular Batteries:</strong> Cost-effective deep-cycle lead-acid batteries with 1,200–1,500 cycle life, reliable performance for standard residential backup.
+                                </li>
+                            </ul>
+                            <a href="<?= Url::to(['/site/contact', 'topic' => 'Hybrid Solar Consultation']) ?>" class="btn btn-outline-primary btn-sm fw-semibold w-100">
+                                <i class="bi bi-chat-left-text me-1"></i> Get a Custom Hybrid Solar Sizing Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deep Dive 3: Commercial & Industrial Solar (C&I) -->
+            <div class="card border-0 rounded-4 shadow-sm mb-4 overflow-hidden">
+                <div class="card-header bg-navy text-white p-4 d-flex flex-wrap align-items-center justify-content-between gap-2" style="background: linear-gradient(135deg, #090d16 0%, #172554 100%);">
+                    <div>
+                        <span class="badge bg-info text-white fw-bold mb-1"><i class="bi bi-building-fill me-1"></i>10 kW to 500 kW+ Plants</span>
+                        <h3 class="fw-bold text-white fs-5 mb-0">3. Commercial &amp; Industrial Rooftop Solar (C&amp;I)</h3>
+                    </div>
+                    <span class="text-white-50 small">Hotels, Hospitals, Schools, Warehouses &amp; Factories</span>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <h4 class="fw-bold text-navy fs-6 mb-2"><i class="bi bi-graph-up-arrow text-primary me-2"></i>Commercial Economics</h4>
+                            <p class="text-muted small mb-3">
+                                Commercial electricity in Odisha ranges from ₹7.00 to ₹9.50+ per unit. Commercial rooftop solar generates power on-site at a levelized cost of under ₹2.50 per unit over 25 years. A 20 kW to 50 kW installation for a hotel, private hospital, or cold storage facility routinely saves between ₹25,000 and ₹75,000+ per month on daytime power tariffs.
+                            </p>
+                            <h4 class="fw-bold text-navy fs-6 mb-2"><i class="bi bi-percent text-success me-2"></i>Tax Depreciation Benefits</h4>
+                            <p class="text-muted small mb-0">
+                                While commercial consumers are not eligible for residential MNRE cash DBT, businesses can claim <strong>40% Accelerated Depreciation</strong> under Section 32 of the Income Tax Act in the very first year, dramatically lowering company income tax liabilities.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 border-start-lg">
+                            <h4 class="fw-bold text-navy fs-6 mb-2"><i class="bi bi-shield-lock text-primary me-2"></i>Industrial Turnkey EPC Scope</h4>
+                            <ul class="list-unstyled small text-muted mb-3 d-flex flex-column gap-1">
+                                <li>&bull; 3D PVsyst shadow and yield modeling for guaranteed generation.</li>
+                                <li>&bull; Three-phase LT / HT grid synchronization with TPCODL commercial net-metering.</li>
+                                <li>&bull; Heavy-duty PEB tin-shed non-penetrating clamping mounting structures.</li>
+                                <li>&bull; Cloud SCADA remote monitoring app with string-level performance alerts.</li>
+                            </ul>
+                            <a href="<?= Url::to(['/site/contact', 'topic' => 'Commercial Solar EPC Quotation']) ?>" class="btn btn-warning btn-sm fw-bold text-dark w-100 py-2">
+                                <i class="bi bi-calculator me-1"></i> Request a Commercial Solar Feasibility Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deep Dive 4: Agricultural Solar Pumping (PM KUSUM) -->
+            <div class="card border-0 rounded-4 shadow-sm mb-4 overflow-hidden">
+                <div class="card-header bg-navy text-white p-4 d-flex flex-wrap align-items-center justify-content-between gap-2" style="background: linear-gradient(135deg, #14532d 0%, #166534 100%);">
+                    <div>
+                        <span class="badge bg-warning text-dark fw-bold mb-1"><i class="bi bi-droplet-fill me-1"></i>Agriculture &amp; Irrigation</span>
+                        <h3 class="fw-bold text-white fs-5 mb-0">4. Solar Water Pumping Systems (PM KUSUM)</h3>
+                    </div>
+                    <span class="text-white-50 small">Zero diesel dependency for Odisha farmers and farmhouses</span>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <h4 class="fw-bold text-navy fs-6 mb-2"><i class="bi bi-moisture text-success me-2"></i>How Solar Pumping Works</h4>
+                            <p class="text-muted small mb-3">
+                                High-efficiency DC or AC submersible solar pumps operate directly from dedicated solar photovoltaic arrays via an intelligent MPPT solar pump controller. The system starts automatically at sunrise, ramps up discharge as sunlight intensifies, and runs without drawing a single unit of grid electricity or consuming expensive diesel.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 border-start-lg">
+                            <h4 class="fw-bold text-navy fs-6 mb-2"><i class="bi bi-sliders text-success me-2"></i>Available Sizing</h4>
+                            <p class="text-muted small mb-3">
+                                Available in 3 HP, 5 HP, and 7.5 HP capacities suitable for open wells, borewells up to 350+ feet, drip irrigation systems, fish farming ponds, and rural community drinking water schemes across Odisha.
+                            </p>
+                            <a href="<?= Url::to(['/site/contact', 'topic' => 'Solar Water Pump Inquiry']) ?>" class="btn btn-outline-success btn-sm fw-semibold w-100">
+                                <i class="bi bi-telephone-outbound me-1"></i> Inquire About Solar Pump Solutions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service FAQs Accordion -->
+            <div class="mt-5" style="max-width: 860px; margin: 0 auto;">
+                <div class="text-center mb-4">
+                    <span class="text-orange fw-bold text-uppercase tracking-wider small">Got Questions?</span>
+                    <h3 class="fw-bold text-navy mt-1">Frequently Asked Solar Questions</h3>
+                </div>
+
+                <div class="accordion shadow-sm rounded-4 overflow-hidden" id="serviceFaqAccordion">
+                    <div class="accordion-item border-0 border-bottom">
+                        <h4 class="accordion-header" id="sFaq1">
+                            <button class="accordion-button fw-semibold text-navy py-3" type="button" data-bs-toggle="collapse" data-bs-target="#sCollapse1">
+                                How long does TPCODL net metering approval take in Odisha?
+                            </button>
+                        </h4>
+                        <div id="sCollapse1" class="accordion-collapse collapse show" data-bs-parent="#serviceFaqAccordion">
+                            <div class="accordion-body text-muted small leading-relaxed">
+                                Under current Odisha DISCOM (TPCODL) standard operating procedures, online technical feasibility is typically cleared within 7–10 days of application. Once the solar plant is installed, DISCOM engineers conduct the site inspection and bi-directional meter testing within 10–14 days. OneSolar handles this entire paperwork and liaison process end-to-end for you.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom">
+                        <h4 class="accordion-header" id="sFaq2">
+                            <button class="accordion-button collapsed fw-semibold text-navy py-3" type="button" data-bs-toggle="collapse" data-bs-target="#sCollapse2">
+                                How much roof area do I need for a 3 kW or 5 kW solar system?
+                            </button>
+                        </h4>
+                        <div id="sCollapse2" class="accordion-collapse collapse" data-bs-parent="#serviceFaqAccordion">
+                            <div class="accordion-body text-muted small leading-relaxed">
+                                Modern high-efficiency Monocrystalline modules require roughly 80 to 100 square feet per kilowatt. Therefore, a 3 kW system needs approximately 250–300 sq.ft of shadow-free rooftop, while a 5 kW system requires around 400–500 sq.ft. We can also build elevated structures that allow you to continue using your rooftop terrace for recreation or washing.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom">
+                        <h4 class="accordion-header" id="sFaq3">
+                            <button class="accordion-button collapsed fw-semibold text-navy py-3" type="button" data-bs-toggle="collapse" data-bs-target="#sCollapse3">
+                                Are solar panels safe against coastal Odisha cyclones?
+                            </button>
+                        </h4>
+                        <div id="sCollapse3" class="accordion-collapse collapse" data-bs-parent="#serviceFaqAccordion">
+                            <div class="accordion-body text-muted small leading-relaxed">
+                                Yes. OneSolar uses structural-grade Hot-Dip Galvanized (HDG) steel mounting structures anchored into RCC roof slabs with chemical grouting and stainless steel (SS304) hardware. All our standard mounting structures are rated to withstand cyclonic wind speeds up to 180 km/h, ensuring maximum resilience during coastal weather events.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0">
+                        <h4 class="accordion-header" id="sFaq4">
+                            <button class="accordion-button collapsed fw-semibold text-navy py-3" type="button" data-bs-toggle="collapse" data-bs-target="#sCollapse4">
+                                What warranties are provided on panels and inverters?
+                            </button>
+                        </h4>
+                        <div id="sCollapse4" class="accordion-collapse collapse" data-bs-parent="#serviceFaqAccordion">
+                            <div class="accordion-body text-muted small leading-relaxed">
+                                Tier-1 solar panels carry a 10–12 year product warranty and a 25-year linear power output performance warranty (guaranteeing at least 80–84% efficiency in year 25). Grid-tied solar inverters come with a standard 5 to 10 year manufacturer warranty, and OneSolar provides comprehensive workmanship and maintenance support.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

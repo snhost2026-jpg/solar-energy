@@ -41,10 +41,10 @@ $currentRoute = Yii::$app->controller->route;
             <div class="navbar-header-row d-flex align-items-center justify-content-between w-100">
                 <!-- Brand Logo -->
                 <a class="navbar-brand d-inline-flex align-items-center gap-2 m-0" href="<?= Yii::$app->homeUrl ?>">
-                    <img src="<?= Url::to('@web/images/logo.png') ?>" alt="Solar Energy" height="42" class="solar-logo-img">
+                    <img src="<?= Url::to('@web/images/logo.png') ?>" alt="OneSolar - Rooftop Solar in Bhubaneswar Odisha" height="42" class="solar-logo-img">
                     <div class="solar-brand-text">
-                        <span class="brand-solar">Solar</span>
-                        <span class="brand-energy">Energy</span>
+                        <span class="brand-solar">One</span>
+                        <span class="brand-energy">Solar</span>
                     </div>
                 </a>
 
@@ -68,6 +68,9 @@ $currentRoute = Yii::$app->controller->route;
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?= ($currentRoute === 'site/services') ? 'active' : '' ?>" href="<?= Url::to(['/site/services']) ?>">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= ($currentRoute === 'site/blog') ? 'active' : '' ?>" href="<?= Url::to(['/site/blog']) ?>">Solar Guides</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-hash="#pm-surya-ghar" href="<?= Url::to(['/site/index', '#' => 'pm-surya-ghar']) ?>">PM Surya Ghar</a>

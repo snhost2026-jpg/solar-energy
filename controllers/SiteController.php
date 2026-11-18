@@ -225,6 +225,16 @@ class SiteController extends Controller
     }
 
     /**
+     * Displays solar blog and educational guides.
+     *
+     * @return string
+     */
+    public function actionBlog(): string
+    {
+        return $this->render('blog');
+    }
+
+    /**
      * Displays Privacy Policy page.
      *
      * @return string
@@ -252,6 +262,31 @@ class SiteController extends Controller
     public function actionSitemap(): string
     {
         return $this->render('sitemap');
+    }
+
+    /**
+     * Serves dynamic XML sitemap for search engines.
+     *
+     * @return Response
+     */
+    public function actionSitemapXml(): Response
+    {
+        $sitemapPath = Yii::getAlias('@webroot/sitemap.xml');
+        if (file_exists($sitemapPath)) {
+            $content = file_get_contents($sitemapPath);
+            $currentHost = Yii::$app->request->hostInfo;
+            if (!empty($currentHost)) {
+                $content = str_replace(['https://solar-energy-main.vercel.app', 'https://solar.sargnexus.digital', 'https://onesolar.in'], rtrim($currentHost, '/'), $content);
+            }
+        } else {
+            $content = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>';
+        }
+
+        $response = Yii::$app->response;
+        $response->format = Response::FORMAT_RAW;
+        $response->headers->set('Content-Type', 'application/xml; charset=UTF-8');
+        $response->data = $content;
+        return $response;
     }
 
     /**

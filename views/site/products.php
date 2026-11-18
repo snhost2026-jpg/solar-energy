@@ -5,10 +5,6 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-$this->title = 'Our Products - Reliable Solar Products for a Cleaner Tomorrow';
-$this->params['meta_description'] = 'Explore our complete range of Solar Panels, Solar Inverters, Solar Batteries, Mounting Structures, Monitoring Systems, Solar Water Pumps, Solar Water Heaters, and Solar Street Lights.';
-$this->params['meta_keywords'] = 'Solar Panels, Solar Inverters, Solar Batteries, Mounting Structures, Monitoring Systems, Solar Water Pump, Solar Water Heater, Solar Street Lights';
-
 $validSlugs = [
     'solar-panels',
     'solar-inverters',
@@ -24,6 +20,64 @@ $initialProduct = Yii::$app->request->get('product', 'solar-panels');
 if (!in_array($initialProduct, $validSlugs, true)) {
     $initialProduct = 'solar-panels';
 }
+
+$productSeo = [
+    'solar-panels' => [
+        'title' => 'High-Efficiency Solar Panels in Bhubaneswar | Monocrystalline Panels Odisha',
+        'desc' => 'Buy Tier-1 monocrystalline & bifacial solar panels in Bhubaneswar, Odisha. High daily power generation, weather-resistant build & 25-year warranty.',
+        'keywords' => 'solar panels Bhubaneswar, monocrystalline solar panels Odisha, bifacial solar panel price, 550W solar module price, residential rooftop panels, DCR solar panel PM Surya Ghar, solar energy Dumuduma',
+    ],
+    'solar-inverters' => [
+        'title' => 'Smart Solar Inverters in Odisha | On-Grid & Hybrid Inverters | OneSolar',
+        'desc' => 'High-efficiency on-grid, off-grid and hybrid solar inverters in Bhubaneswar, Odisha. Fast switching, MPPT tracking and remote app monitoring support.',
+        'keywords' => 'solar inverters Bhubaneswar, hybrid inverter price Odisha, on-grid solar inverter, 3kW solar inverter, 5kW hybrid inverter, solar PCU, MPPT solar inverter, solar inverter dealer',
+    ],
+    'solar-batteries' => [
+        'title' => 'Long-Life Solar Batteries in Bhubaneswar | Solar Energy Storage Odisha',
+        'desc' => 'High-performance lithium & tubular solar batteries for homes and businesses in Odisha. Long backup power, deep cycle lifespan & low maintenance.',
+        'keywords' => 'solar battery Bhubaneswar, lithium solar battery Odisha, inverter battery storage, deep cycle solar battery price, 48V lithium ion battery for solar, tubular solar battery Cuttack',
+    ],
+    'mounting-structures' => [
+        'title' => 'Heavy-Duty Solar Mounting Structures in Odisha | Rust-Proof Roof Racks',
+        'desc' => 'Corrosion-resistant GI & aluminium rooftop solar mounting structures in Bhubaneswar. Engineered for RCC terraces, metal sheds & high-wind resistance.',
+        'keywords' => 'solar mounting structure Odisha, rooftop solar frame, aluminium solar structure, rust proof solar brackets Bhubaneswar, elevated solar rooftop structure, GI solar structure price',
+    ],
+    'monitoring-systems' => [
+        'title' => 'Real-Time Solar Remote Monitoring Systems | Smart Energy Tracking Odisha',
+        'desc' => 'Track your daily solar generation, grid export, and household consumption in real-time from your smartphone. Smart IoT solar monitoring solutions in Odisha.',
+        'keywords' => 'solar monitoring system, real time solar app tracking, solar generation meter Odisha, remote solar diagnostics, smart solar wifi dongle, solar inverter cloud monitoring',
+    ],
+    'solar-water-pump' => [
+        'title' => 'Agricultural Solar Water Pumps in Odisha | Zero-Fuel Irrigation Systems',
+        'desc' => 'Government-subsidized solar water pumps for agriculture & irrigation in Odisha. Submersible and surface solar pumps for zero-electricity diesel-free farming.',
+        'keywords' => 'solar water pump Odisha, PM KUSUM solar pump Bhubaneswar, agricultural solar irrigation, solar submersible pump price, 3HP solar pump, 5HP solar pump price in Odisha',
+    ],
+    'solar-water-heater' => [
+        'title' => 'Solar Water Heaters in Bhubaneswar | Evacuated Tube ETC & FPC Systems',
+        'desc' => 'Energy-saving solar water heating systems for homes, hotels and hospitals across Odisha. 24/7 hot water with high thermal efficiency and anti-corrosive tanks.',
+        'keywords' => 'solar water heater Bhubaneswar, ETC solar water heater Odisha, commercial solar heating, solar geyser price, 100 LPD solar water heater, 200 LPD solar water heater Odisha',
+    ],
+    'solar-street-lights' => [
+        'title' => 'All-in-One Solar Street Lights in Odisha | Dusk-to-Dawn Outdoor LED',
+        'desc' => 'Automatic dusk-to-dawn solar street lighting for housing societies, campuses, roads and rural communities in Odisha. Built-in lithium battery and PIR motion sensor.',
+        'keywords' => 'solar street lights Bhubaneswar, all in one solar street light Odisha, solar outdoor lighting, automatic solar street lamp, integrated solar street light with motion sensor, solar garden light',
+    ],
+];
+
+$curSeo = $productSeo[$initialProduct] ?? null;
+if ($curSeo) {
+    $this->title = $curSeo['title'];
+    $this->params['meta_description'] = $curSeo['desc'];
+    $this->params['meta_keywords'] = $curSeo['keywords'];
+} else {
+    $this->title = 'Solar Panels, Inverters & Batteries in Bhubaneswar | OneSolar';
+    $this->params['meta_description'] = 'Buy certified Tier-1 Monocrystalline Solar Panels, MPPT Inverters, Lithium Batteries & Solar Water Pumps in Bhubaneswar, Odisha from OneSolar.';
+    $this->params['meta_keywords'] = 'rooftop solar dealers in Bhubaneswar, solar panel price per watt Odisha, monocrystalline solar panels, solar inverter price Odisha, lithium solar battery Bhubaneswar, OneSolar products';
+}
+
+$this->params['og_title'] = $this->title;
+$this->params['og_description'] = $this->params['meta_description'];
+$this->params['og_image'] = Url::to('@web/images/solar_panels.webp', true);
 ?>
 
 <div class="products-page">
@@ -118,16 +172,16 @@ if (!in_array($initialProduct, $validSlugs, true)) {
 
                             <div class="featured-thumbs-list d-flex flex-row flex-lg-column align-items-center justify-content-center gap-2 w-100" id="featuredThumbsList">
                                 <button type="button" class="featured-thumb-item active" data-thumb-idx="0" aria-label="Product View 1">
-                                    <img src="<?= Url::to('@web/images/solar_panels.webp') ?>" alt="Product View 1" id="thumbImg0">
+                                    <img src="<?= Url::to('@web/images/solar_panels.webp') ?>" alt="Solar Panels Angle View" width="80" height="60" loading="lazy" decoding="async" id="thumbImg0">
                                 </button>
                                 <button type="button" class="featured-thumb-item" data-thumb-idx="1" aria-label="Product View 2">
-                                    <img src="<?= Url::to('@web/images/about_partner_banner.webp') ?>" alt="Product View 2" id="thumbImg1">
+                                    <img src="<?= Url::to('@web/images/about_partner_banner.webp') ?>" alt="Rooftop Solar Partner Installation" width="80" height="60" loading="lazy" decoding="async" id="thumbImg1">
                                 </button>
                                 <button type="button" class="featured-thumb-item" data-thumb-idx="2" aria-label="Product View 3">
-                                    <img src="<?= Url::to('@web/images/hero_solar_house.webp') ?>" alt="Product View 3" id="thumbImg2">
+                                    <img src="<?= Url::to('@web/images/hero_solar_house.webp') ?>" alt="Completed Solar Home System" width="80" height="60" loading="lazy" decoding="async" id="thumbImg2">
                                 </button>
                                 <button type="button" class="featured-thumb-item" data-thumb-idx="3" aria-label="Product View 4">
-                                    <img src="<?= Url::to('@web/images/why_solar_house.webp') ?>" alt="Product View 4" id="thumbImg3">
+                                    <img src="<?= Url::to('@web/images/why_solar_house.webp') ?>" alt="Rooftop Solar Power Generation" width="80" height="60" loading="lazy" decoding="async" id="thumbImg3">
                                 </button>
                             </div>
 
@@ -139,7 +193,11 @@ if (!in_array($initialProduct, $validSlugs, true)) {
                         <!-- Main Large Product Image -->
                         <div class="featured-main-img-box flex-grow-1 position-relative">
                             <img src="<?= Url::to('@web/images/solar_panels.webp') ?>"
-                                 alt="Solar Panels"
+                                 alt="Premium Solar Products and Inverters in Bhubaneswar Odisha"
+                                 width="800"
+                                 height="600"
+                                 loading="lazy"
+                                 decoding="async"
                                  id="featuredMainImg"
                                  class="featured-main-img w-100">
                         </div>
@@ -397,7 +455,7 @@ if (!in_array($initialProduct, $validSlugs, true)) {
                 <div class="col-lg-3 col-sm-6">
                     <div class="products-usage-card h-100">
                         <div class="products-usage-img-wrap">
-                            <img src="<?= Url::to('@web/images/hero_solar_house.webp') ?>" alt="Homes" class="products-usage-img">
+                            <img src="<?= Url::to('@web/images/hero_solar_house.webp') ?>" alt="Residential Rooftop Solar Panel Usage for Homes in Odisha" width="1376" height="768" loading="lazy" decoding="async" class="products-usage-img">
                         </div>
                         <div class="products-usage-body">
                             <h3 class="products-usage-title">Homes</h3>
@@ -412,7 +470,7 @@ if (!in_array($initialProduct, $validSlugs, true)) {
                 <div class="col-lg-3 col-sm-6">
                     <div class="products-usage-card h-100">
                         <div class="products-usage-img-wrap">
-                            <img src="<?= Url::to('@web/images/heater_commercial_hotel.webp') ?>" alt="Businesses" class="products-usage-img">
+                            <img src="<?= Url::to('@web/images/heater_commercial_hotel.webp') ?>" alt="Commercial Solar Heating and Power Systems for Businesses" width="1200" height="896" loading="lazy" decoding="async" class="products-usage-img">
                         </div>
                         <div class="products-usage-body">
                             <h3 class="products-usage-title">Businesses</h3>
@@ -427,7 +485,7 @@ if (!in_array($initialProduct, $validSlugs, true)) {
                 <div class="col-lg-3 col-sm-6">
                     <div class="products-usage-card h-100">
                         <div class="products-usage-img-wrap">
-                            <img src="<?= Url::to('@web/images/streetlight_highway_night.webp') ?>" alt="Communities" class="products-usage-img">
+                            <img src="<?= Url::to('@web/images/streetlight_highway_night.webp') ?>" alt="Community Solar Lighting Systems for Highways and Townships" width="1200" height="896" loading="lazy" decoding="async" class="products-usage-img">
                         </div>
                         <div class="products-usage-body">
                             <h3 class="products-usage-title">Communities</h3>
@@ -442,7 +500,7 @@ if (!in_array($initialProduct, $validSlugs, true)) {
                 <div class="col-lg-3 col-sm-6">
                     <div class="products-usage-card h-100">
                         <div class="products-usage-img-wrap">
-                            <img src="<?= Url::to('@web/images/pump_drip_irrigation.webp') ?>" alt="Special Applications" class="products-usage-img">
+                            <img src="<?= Url::to('@web/images/pump_drip_irrigation.webp') ?>" alt="Agricultural Solar Drip Irrigation and Pumping Solutions" width="1200" height="896" loading="lazy" decoding="async" class="products-usage-img">
                         </div>
                         <div class="products-usage-body">
                             <h3 class="products-usage-title">Special Applications</h3>

@@ -1,7 +1,11 @@
 User-agent: *
+Allow: /
 Disallow: /site/login
 Disallow: /site/admin
 Disallow: /admin
 Disallow: /index.php?r=site/login
 Disallow: /index.php?r=site/admin
 Disallow: /index.php?r=admin
+
+Sitemap: https://onesolar.in/sitemap.xml
+Sitemap: /sitemap.xml
